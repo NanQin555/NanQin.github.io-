@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>怎样在windows环境下远程连接到虚拟机的Ubunt</title>
+    <link href="/2022/09/02/%E6%80%8E%E6%A0%B7%E5%9C%A8windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%88%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84Ubunt/"/>
+    <url>/2022/09/02/%E6%80%8E%E6%A0%B7%E5%9C%A8windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%88%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84Ubunt/</url>
+    
+    <content type="html"><![CDATA[<h1 id="1-在虚拟机中安装Ubutun"><a href="#1-在虚拟机中安装Ubutun" class="headerlink" title="1.在虚拟机中安装Ubutun"></a>1.在虚拟机中安装Ubutun</h1><ul><li><p><strong>软件选择：VMware Workstation</strong></p><p><del>安装VM这就应该不用说什么了吧</del></p><p>发挥个人各种资源手段搞到一个Ubuntu镜像文件</p><p>安装Ubuntu</p></li></ul><hr><h1 id="2-SSH服务"><a href="#2-SSH服务" class="headerlink" title="2.SSH服务"></a>2.SSH服务</h1><p>​       SSH 为 Secure Shell 的缩写，由 IETF 的网络小组（Network Working Group）所制定；SSH 为建立在应用层基础上的安全协议。SSH 是较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。SSH最初是UNIX系统上的一个程序，后来又迅速扩展到其他操作平台。SSH在正确使用时可弥补网络中的漏洞。SSH客户端适用于多种平台。</p><p>​      可以通过Windows自带的命令行连接，也可以使用vscode，还可以使用可视化第三方软件如某shell。</p><h1 id="3-通过-VScode-的-Remote-插件连接至虚拟机"><a href="#3-通过-VScode-的-Remote-插件连接至虚拟机" class="headerlink" title="3.通过 VScode 的 Remote 插件连接至虚拟机"></a>3.通过 <code>VScode</code> 的 <code>Remote</code> 插件连接至虚拟机</h1><ul><li><p><strong>VScode 上安装remote插件</strong></p><p><img src="https://s3.bmp.ovh/imgs/2022/09/02/50f858a93308a522.png"></p><p>此处选择安装Remote Development<del>SSH WSL等均一键安装</del></p></li><li><p> <strong>设置要连接的主机IP地址和用户名</strong></p></li></ul><p>​        <img src="https://s3.bmp.ovh/imgs/2022/09/02/0d9063ea4b31c27d.png"></p><ul><li><p><strong>报错<del>折磨时刻</del></strong></p><ol><li><strong>连接的时候报错 A ssh installation not found</strong></li></ol><p>​       在服务端和客户端安装ssh服务<del>好像win10自带ssh服务</del></p><ol start="2"><li><strong>提示permission denied</strong></li></ol><p>​       打开被连主机的配置文件：<strong>sudo vi /etc/ssh/sshd_config</strong><br>​       找到PermitRootLogin ，修改为yes<br>​       重启ssh服务</p><p>​       再次初步认识Ubuntu的终端命令使用</p><p>​       <del>什么文件权限不够、什么找不到文件在哪里真的把人搞麻了</del></p><ol start="3"><li><strong>写入管道不存在</strong></li></ol><p>​       是配置的时候写错了重新改了一下就好了</p></li></ul><h1 id="4-连接成功"><a href="#4-连接成功" class="headerlink" title="4.连接成功"></a>4.连接成功</h1><p>​        当VScode出现下图时，就已成功连接</p><p>​       <img src="https://s3.bmp.ovh/imgs/2022/09/02/28345d70bd7664eb.png"></p><p>​       <del>就可以随心所欲地乱搞</del></p><h1 id="5-免密登录"><a href="#5-免密登录" class="headerlink" title="5.免密登录"></a>5.免密登录</h1><ul><li><strong>在客户端生成密匙对</strong></li></ul><p>​       命令：ssh-keygen 可直接生成密匙对，可以连按空格键使密码为空</p><p>​       注意密匙对的格式为rsa,在C:\Users\username.ssh 路径下一定有密匙对</p><ul><li><strong>将客户端的公钥上传至服务端</strong></li></ul><p>​       这里又要涉及到权限的问题，一是用户的权限，一是文件的权限</p><p>​       sudo su 进入root模式</p><p>​       </p><ul><li> <strong>修改文件的权限</strong></li></ul><p>​        改.ssh目录的权限为700，文件authorized_keys和私钥的权限为600</p><p>​        chmod 700 目标机器路径/.ssh</p><p>​        chmod 600 目标机器路径/.ssh/authorized_keys</p><ul><li><strong>测试是否能够免密登录</strong></li></ul><h1 id="完成撒花"><a href="#完成撒花" class="headerlink" title="完成撒花"></a>完成撒花</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>菜鸟搭建博客的过程</title>
     <link href="/2022/08/31/%E8%8F%9C%E9%B8%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/"/>
     <url>/2022/08/31/%E8%8F%9C%E9%B8%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%87%E7%A8%8B/</url>
