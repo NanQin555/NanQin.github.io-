@@ -16,21 +16,22 @@
   <meta name="author" content="NanQin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="个人状态记录自开学以来的状态，总的来说就是三天打鱼两天晒网。其实了解到焦糖招新题在开学前，基于2021年的题进行了一些基础的尝试，但事实证明，一个小白很难完成，哪怕这只是萌新福利向。 招新题于我而言是一个不小的挑战，从成功打开GitHub，到初步学习git，到搭建个人博客，到安装Ubuntu虚拟机环境并ssh远程连接还要配置免密登陆，每一步都是不小的挑战，每一步都消耗了大量的时间。三个小时，换来的">
+    <meta name="description" content="资料库可以储存资讯的东西 数据库（DB)  资料库管理系统（DBMS） 关联式资料库（SQL） 非关联式资料库（noSQL） 什么是SQLStructured Query Language MYSQL优点：开放源代码，免费试用 性能高 储存过程数据入表，表入库 属性主键(primary key)这个属性可以惟一地表示每一个资料 在同一个表下当两个主键均不能唯一表示一个资料时，可以设立俩个主键，当两">
 <meta property="og:type" content="article">
-<meta property="og:title" content="视界之外 想象之中">
-<meta property="og:url" content="http://example.com/2022/10/12/%E4%B8%AA%E4%BA%BA%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="SQL学习笔记（更新中）">
+<meta property="og:url" content="http://example.com/2022/10/12/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/index.html">
 <meta property="og:site_name" content="视界之外 想象之中">
-<meta property="og:description" content="个人状态记录自开学以来的状态，总的来说就是三天打鱼两天晒网。其实了解到焦糖招新题在开学前，基于2021年的题进行了一些基础的尝试，但事实证明，一个小白很难完成，哪怕这只是萌新福利向。 招新题于我而言是一个不小的挑战，从成功打开GitHub，到初步学习git，到搭建个人博客，到安装Ubuntu虚拟机环境并ssh远程连接还要配置免密登陆，每一步都是不小的挑战，每一步都消耗了大量的时间。三个小时，换来的">
+<meta property="og:description" content="资料库可以储存资讯的东西 数据库（DB)  资料库管理系统（DBMS） 关联式资料库（SQL） 非关联式资料库（noSQL） 什么是SQLStructured Query Language MYSQL优点：开放源代码，免费试用 性能高 储存过程数据入表，表入库 属性主键(primary key)这个属性可以惟一地表示每一个资料 在同一个表下当两个主键均不能唯一表示一个资料时，可以设立俩个主键，当两">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-10-12T10:15:15.916Z">
-<meta property="article:modified_time" content="2022-09-15T08:02:09.698Z">
+<meta property="article:published_time" content="2022-10-12T10:19:09.000Z">
+<meta property="article:modified_time" content="2022-10-13T09:12:43.380Z">
 <meta property="article:author" content="NanQin">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>视界之外 想象之中</title>
+  <title>SQL学习笔记（更新中） - 视界之外 想象之中</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -159,7 +160,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="SQL学习笔记（更新中）"></span>
           
         </div>
 
@@ -170,7 +171,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-12 18:15" pubdate>
+        <time datetime="2022-10-12 18:19" pubdate>
           October 12, 2022 pm
         </time>
       </span>
@@ -182,7 +183,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          657 words
+          895 words
         
       </span>
     
@@ -193,7 +194,7 @@
         
         
         
-          6 mins
+          8 mins
         
       </span>
     
@@ -231,21 +232,36 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">SQL学习笔记（更新中）</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="个人状态记录"><a href="#个人状态记录" class="headerlink" title="个人状态记录"></a>个人状态记录</h1><p>自开学以来的状态，总的来说就是三天打鱼两天晒网。其实了解到焦糖招新题在开学前，基于2021年的题进行了一些基础的尝试，但事实证明，一个小白很难完成，哪怕这只是萌新福利向。</p>
-<p>招新题于我而言是一个不小的挑战，从成功打开GitHub，到初步学习git，到搭建个人博客，到安装Ubuntu虚拟机环境并ssh远程连接还要配置免密登陆，每一步都是不小的挑战，每一步都消耗了大量的时间。三个小时，换来的是毫无进展，换来的是焦虑不安，换来的是头昏脑胀，以至于多次想放弃。</p>
-<p>一开始选择尝试了#6爬虫题，可我没有任何基础，看了教学视频感觉与题目要求还隔着十万八千里，关键是扒了别人一段代码因为爬的过快被封ip，导致室友也爬不到，但室友最后还是能龟速爬取到一些信息。</p>
-<p>再又看了看数据库，初步学习了如何打开MySQL，但跟着教程走总是会和教程的结果完全不一样。在这个题上又是浪费几天却毫无进展。</p>
-<p>愈想进焦糖，只能感到愈发焦虑。所以我不在跟风其他人做什么题我就做什么题，毕竟人比人气死人，专注学自己的东西。学到的都是自己的，与能否进入焦糖无关。</p>
-<p>最后选择了#人工智能，我想，我不像别人参加过竞赛，没那么好的基础，但在人工智能这一块，小白学习的更多的是一种思想，一种思路。我认为，我不会比任何人差。</p>
-<p>那就赌一场，从零开始学习人工智能，哪怕我也不会python，也不懂什么pytorch。</p>
-<p>我希望，至此结束之前的低效率、无意义。开始一段认认真真的学习。</p>
-<p>至于能否成功进入，I don’t care，权当是一场无心插柳柳成荫的美丽。</p>
-<p>—— 2022.9.10</p>
+                <h1 id="资料库"><a href="#资料库" class="headerlink" title="资料库"></a>资料库</h1><p>可以储存资讯的东西</p>
+<p>数据库（DB) </p>
+<p>资料库管理系统（DBMS）</p>
+<p>关联式资料库（SQL）</p>
+<p>非关联式资料库（noSQL）</p>
+<h1 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL"></a>什么是SQL</h1><p>Structured Query Language</p>
+<h1 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h1><p>优点：开放源代码，免费试用</p>
+<p>性能高</p>
+<h2 id="储存过程"><a href="#储存过程" class="headerlink" title="储存过程"></a>储存过程</h2><p>数据入表，表入库</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="主键-primary-key"><a href="#主键-primary-key" class="headerlink" title="主键(primary key)"></a>主键(primary key)</h3><p>这个属性可以惟一地表示每一个资料</p>
+<p>在同一个表下当两个主键均不能唯一表示一个资料时，可以设立俩个主键，当两个主键在一起时看作一个主键，也就可以对应一个资料。如果仍然不能，则再增加主键的个数，以此类推</p>
+<p> 一个属性可以同时作为主键和外键</p>
+<h3 id="外键-foreign-key"><a href="#外键-foreign-key" class="headerlink" title="外键(foreign key)"></a>外键(foreign key)</h3><p>对应另一张表的primary key</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>一个库多个表，表名要有唯一性</p>
+<p>表要有特性</p>
+<p>表由列组成，字段</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>DDL     定义语言</p>
+<p>DML    操作语言</p>
+<p>DQL    查询语言</p>
+<p>DCL     控制语言</p>
+<p>操作数据库 &gt; 库中的表 &gt; 表中的数据</p>
+<p>关键字不区分大小写</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 这是单行注释语法</span><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">   这是多行注释</span><br><span class="hljs-comment">*/</span><br><span class="hljs-comment">-- 所有语句使用分号结尾</span><br><span class="hljs-comment">-- 如果数据库名字或字段名与关键字重复则使用``围住数据库名字</span><br><span class="hljs-comment">-- []表示可选命令  &#123;&#125;表示必须命令</span><br><br><br><br><span class="hljs-comment">-- 创建、删除、使用和查看数据库</span><br><span class="hljs-keyword">CREATE</span> DATABASE [IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>] name;<br><span class="hljs-keyword">SHOW</span> DATABASE;<br><br><span class="hljs-keyword">DROP</span> DATABASE [IF  <span class="hljs-keyword">EXISTS</span>] name;<br><br>USE name;<br><br><span class="hljs-keyword">SHOW</span> DATABASE;<span class="hljs-comment">-- 所有的数据库</span><br><br><span class="hljs-comment">-- 创建资料库表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> student(<br>    `student_id` <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key,<br>    `name` <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>),<br>    `major` <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>)<br>);<br><br><span class="hljs-comment">--------------------------------------</span><br><span class="hljs-comment">-- 查看命令</span><br><span class="hljs-comment">-- 查看所有数据库</span><br><span class="hljs-keyword">show</span> database;<br><span class="hljs-comment">-- 切换/使用数据库</span><br>use database_name;<br><span class="hljs-comment">-- 查看数据库中所有的表</span><br><span class="hljs-keyword">show</span> tables;<br><span class="hljs-comment">-- 显示数据库中所有表的信息</span><br><span class="hljs-keyword">desc</span> tables_name; <span class="hljs-comment">-- describe</span><br><br><br><br></code></pre></td></tr></table></figure>
+
+
 
                 
               </div>
@@ -255,6 +271,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">#学习笔记</a>
+      
+    </div>
+  
 </div>
 
 
@@ -263,8 +286,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2022/10/12/个人状态记录/</div>
+      <div>SQL学习笔记（更新中）</div>
+      <div>http://example.com/2022/10/12/SQL学习笔记（更新中）/</div>
     </div>
     <div class="license-meta">
       
@@ -306,12 +329,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2022/10/12/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/" title="C语言学习笔记（更新中）">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">C语言学习笔记（更新中）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/28/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/" title="SQL学习笔记（更新中）">
-                        <span class="hidden-mobile">SQL学习笔记（更新中）</span>
+                      <a href="/2022/09/28/%E5%9F%BA%E7%A1%80%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/" title="基础人工智能学习">
+                        <span class="hidden-mobile">基础人工智能学习</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
